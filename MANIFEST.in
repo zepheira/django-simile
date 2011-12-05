@@ -1,0 +1,9 @@
+include setup.py README MANIFEST.in
+global-include fixtures/*
+
+graft simile/templates
+graft simile/static
+graft simile/locale
+
+prune freemix/site_media
+prune docs/_build
