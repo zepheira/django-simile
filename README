@@ -1,0 +1,10 @@
+This is a rebundling of some Simile widgets for use in Django projects.
+This is mostly in support of Freemix in advance of a migration to Exhibit 3.
+
+Templates are separated into css and js, and depend on django-compressor (http://django_compressor.readthedocs.org/en/latest/index.html)
+
+TODO
+====
+* Locale support
+* Map Views other than the OpenLayers widget
+* An example project with the Exhibit demos

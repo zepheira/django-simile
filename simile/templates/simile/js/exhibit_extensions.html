@@ -1,5 +1,26 @@
-<script type="text/javascript" src="http://extensions.simile.zepheira.com/map/map-extension.js?service=openlayers"></script>
-<script type="text/javascript" src="http://api.simile.zepheira.com/exhibit/2.2.0/extensions/chart/scripts/scatter-plot-view.js"></script>
-<script type="text/javascript" src="http://api.simile.zepheira.com/exhibit/2.2.0/extensions/time/time-extension.js"></script>
+{% load compress %}
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript" src="http://extensions.simile.zepheira.com/piechart/piechart-extension.js"></script>
+
+<script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
+<script type="text/javascript" src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
+
+{% compress js %}
+{% include "simile/js/timeline.html" %}
+
+<script type="text/javascript" src="{{STATIC_URL}}simile/exhibit/extensions/time/scripts/timeline-view.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}simile/exhibit/extensions/time/locales/en/time-locale.js"></script>
+
+<script type="text/javascript" src="{{STATIC_URL}}simile/exhibit/extensions/chart/scripts/scatter-plot-view.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}simile/exhibit/extensions/chart/scripts/bar-chart-view.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}simile/exhibit/extensions/chart/scripts/pivot-table-view.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}simile/exhibit/extensions/chart/locales/en/chart-locale.js"></script>
+
+<script type="text/javascript" src="{{STATIC_URL}}simile/exhibit/extensions/piechart/scripts/piechart-view.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}simile/exhibit/extensions/piechart/locales/en/piechart-locale.js"></script>
+
+<script type="text/javascript" src="{{STATIC_URL}}simile/exhibit/extensions/map/scripts/olmap-view.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}simile/exhibit/extensions/map/locales/en/map-locale.js"></script>
+
+
+{% endcompress %}
+
