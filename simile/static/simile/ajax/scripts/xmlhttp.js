@@ -16,7 +16,7 @@ SimileAjax.XmlHttp._onReadyStateChange = function(xmlhttp, fError, fDone) {
     
     // Download complete
     case 4:
-        try {
+//        try {
             if (xmlhttp.status == 0     // file:// urls, works on Firefox
              || xmlhttp.status == 200   // http:// urls
             ) {
@@ -32,9 +32,9 @@ SimileAjax.XmlHttp._onReadyStateChange = function(xmlhttp, fError, fDone) {
                     );
                 }
             }
-        } catch (e) {
-            SimileAjax.Debug.exception("XmlHttp: Error handling onReadyStateChange", e);
-        }
+//        } catch (e) {
+//            SimileAjax.Debug.exception("XmlHttp: Error handling onReadyStateChange", e);
+//        }
         break;
     }
 };
